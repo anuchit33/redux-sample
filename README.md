@@ -3,6 +3,7 @@
 ### Redux 
 - Action
 - Reducers
+- createStore
 - Dispatch
 - Connect
 - mapStateToProps
