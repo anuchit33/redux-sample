@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid,Button ,Container,Divider,Header} from 'semantic-ui-react'
+import { Container,Divider,Header} from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 import './App.css';
@@ -18,6 +18,8 @@ class App extends Component {
   }
 
   render() {
+
+    //console.log('App props',this.props)
 
     return (
       <Container className="App">
@@ -45,12 +47,10 @@ class App extends Component {
 // mapStateToProps
 const mapStateToProps = state =>{
 
-  console.log('state_all',state)
+  console.log('Redux Storate state_all',state)
   return ({
     auth_reducers: state.auth_reducers,
     name_reducers: state.name_reducers
   })
 }
-export default connect(
-  mapStateToProps,
-)(App)
+export default connect(mapStateToProps, )(App)
