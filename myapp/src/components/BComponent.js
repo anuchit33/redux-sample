@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { logout_action,login_action } from '../actions'
-import {Button} from 'semantic-ui-react'
 
 class AComponent extends Component {
   constructor(props) {
@@ -9,21 +8,6 @@ class AComponent extends Component {
     this.state = {
      
     }
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick(e){
-    const {auth_reducers,dispatch} = this.props
-
-    if(auth_reducers.is_login){
-
-      // call logout_action
-      dispatch(logout_action())
-    }else if(!auth_reducers.is_login){
-
-      // call logout_action
-      dispatch(login_action())
-  }
   }
 
   render() {
